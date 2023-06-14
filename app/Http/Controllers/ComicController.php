@@ -25,7 +25,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view( 'pages.create' );
     }
 
     /**
@@ -36,7 +36,23 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $form_data = $request->all();
+
+        $new_comic = new Comic();
+        /*         $new_pasta->title = $form_data['title'];
+                $new_pasta->description = $form_data['description'];
+                $new_pasta->type = $form_data['type'];
+                $new_pasta->image = $form_data['image'];
+                $new_pasta->cooking_time = $form_data['cooking_time'];
+                $new_pasta->weight = $form_data['weight']; */
+        
+        
+                //Solo grazie al model con protected $fillable
+                $new_comic->fill( $form_data );
+        
+                $new_comic->save();
+        
+                return redirect()->route( 'comics.index' );
     }
 
     /**

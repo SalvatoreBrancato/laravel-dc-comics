@@ -2,6 +2,7 @@
     <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="">
     <ul>
       <li><a href="/">Home</a></li>
+      <li><a href="{{ route('comics.create') }}">Form</a></li>
       <li><a href="#">Characters</a></li>
       <li><a href="#">Comics</a></li>
       <li><a href="#">Movies</a></li>
