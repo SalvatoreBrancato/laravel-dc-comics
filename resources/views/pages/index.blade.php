@@ -6,12 +6,14 @@
      <div class="container-card">
         <div class="current-series">CURRENT SERIES</div>
         
-        {{-- @foreach( $comics as $elem )
+        @foreach( $comics as $elem )
+        <a class="ancor" href="/comics/{{$elem['id']}}">
             <div class="box-card">
                 <img src="{{ $elem['thumb'] }}"  alt="">
                 <h3>{{$elem['title']}}</h3>
             </div>
-        @endforeach   --}}
+        </a>
+        @endforeach 
         
     </div>
     <div class="d-flex justify-content-center">

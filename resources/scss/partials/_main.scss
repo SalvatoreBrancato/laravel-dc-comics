@@ -24,20 +24,27 @@
             top: -15px;
             left: 60px;
         }
-        .box-card{
+        .ancor{
+            text-decoration: none;
             width: calc(100% / 6);
             display: flex;
             align-items: center;
             flex-direction: column;
-            h3{
-                font-size: 12px;
-                color: white;
-                margin-top: 5px;
-                width: 60%;
-                text-align: center;
-            }
-            img{
-                width: 60%;
+            .box-card{
+                // width: calc(100% / 6);
+                // display: flex;
+                // align-items: center;
+                // flex-direction: column;
+                h3{
+                    font-size: 12px;
+                    color: white;
+                    margin-top: 5px;
+                    width: 60%;
+                    text-align: center;
+                }
+                img{
+                    width: 60%;
+                }
             }
         }
     }

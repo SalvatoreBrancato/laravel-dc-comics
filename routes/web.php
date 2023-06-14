@@ -15,4 +15,5 @@ use App\Http\Controllers\ComicController;
 */
 
 
-Route::resource('/',  ComicController::class  );
+Route::resource('/comics',  ComicController::class  );
+
