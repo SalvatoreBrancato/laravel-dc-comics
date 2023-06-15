@@ -1,17 +1,17 @@
 <div id="nav">
     <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="">
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="{{ route('comics.create') }}">Form</a></li>
-      <li><a href="#">Characters</a></li>
-      <li><a href="#">Comics</a></li>
-      <li><a href="#">Movies</a></li>
-      <li><a href="#">TV</a></li>
-      <li><a href="#">Games</a></li>
-      <li><a href="#">Collectibles</a></li>
-      <li><a href="#">Videos</a></li>
-      <li><a href="#">Fans</a></li>
-      <li><a href="#">News</a></li>
-      <li><a href="#">Shop</a></li>
+      <li><a class="link" href="{{route('home')}}">Home</a></li>
+      <li><a class="link" href="{{ route('comics.create') }}">Form</a></li>
+      <li><a class="link" href="#">Characters</a></li>
+      <li><a class="link" href="#">Comics</a></li>
+      <li><a class="link" href="#">Movies</a></li>
+      <li><a class="link" href="#">TV</a></li>
+      <li><a class="link" href="#">Games</a></li>
+      <li><a class="link" href="#">Collectibles</a></li>
+      <li><a class="link" href="#">Videos</a></li>
+      <li><a class="link" href="#">Fans</a></li>
+      <li><a class="link" href="#">News</a></li>
+      <li><a class="link" href="#">Shop</a></li>
     </ul>
 </div>
