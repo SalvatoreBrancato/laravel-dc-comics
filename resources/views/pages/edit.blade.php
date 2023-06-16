@@ -3,6 +3,15 @@
 @section('comics')
 <div class="container">
     <h1>Form edit Fumetto</h1>
+    @if($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach($errors->all() as $error)
+            <li> {{$error}}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
     <form action="{{ route( 'comics.update', $comic ) }}" method="POST" >
 
         @csrf
@@ -10,7 +19,10 @@
 
         <div class="form-group">
             <label for="comic-title" class="form-label">Title</label>
-            <input type="text" id="comic-title" name="title" class="form-control" value="{{$comic->title}}">
+            <input type="text" id="comic-title" name="title" class="form-control @error('title')  is-invalid @enderror" value="{{$comic->title}}">
+            @error('title')
+            <div class="alert alert-danger">{{$message}}</div>
+            @enderror
         </div>
 
         <div class="form-group">

@@ -36,6 +36,16 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        // validate
+        $request->validate([
+            'title'=>'required|unique:comics|max:255'
+        ],
+        [
+           'title.required'=>'Il campo è obbligatorio',
+           'title.unique'=>'Il dato è già presente',
+           'title-max'=>'Il titolo supera il valore massimo' 
+        ]);
+
         $form_data = $request->all();
 
         $new_comic = new Comic();
@@ -87,6 +97,16 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        // validate
+        $request->validate([
+            'title'=>'required|unique:comics|max:255'
+        ],
+        [
+            'title.required'=>'Il campo è obbligatorio',
+            'title.unique'=>'Il dato è già presente',
+            'title-max'=>'Il titolo supera il valore massimo' 
+         ]);
+
         $form_data = $request->all();
         $comic->update($form_data);
 
